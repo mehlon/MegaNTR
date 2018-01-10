@@ -13,7 +13,9 @@ All cheat files were intitally sourced from fort42: http://www.fort42.com/gatesh
 
 ### Installation
 
-1. Extract the zip to your 3DS system's "plugin" folder
+1. Extract the zip to your 3DS system's "plugin" folder. Next, open the "plugin" folder using a UNIX `bash` shell by `cd`-ing to it, then run this command 
+   ```for i in *; do a=$(find "$i"/*.plg -type f -printf "%f\n" | sed -e 's/\.plg$//'); mv "$i" "$a"; done```
+   this will fix the folder names.
 
 2. Open bootNTR Selector and let it do it's thing
 
